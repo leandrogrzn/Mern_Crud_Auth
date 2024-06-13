@@ -64,7 +64,6 @@ export const AuthProvider = ({ children }) => {
             }
                 try {
                     const res =  await verityTokenRequet(cookies.token)
-                    console.log(res)
                     if(!res.data) {
                         setIsAuthenticated(false)
                         setLoading(false)
