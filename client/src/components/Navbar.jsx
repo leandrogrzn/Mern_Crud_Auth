@@ -11,8 +11,8 @@ function Navbar() {
             <ul className="flex gap-x-6">
                 {isAuthenticated ? (
                     <>
-                        <div className="flex">
-                            <h1 className="pr-1">Welcome</h1><h1 className="font-bold">{user.username}</h1>
+                        <div className="flex gap-x-2">
+                            <h1>Welcome</h1><h1 className="font-bold">{user.username}</h1>
                         </div>
                         <li>
                             <Link to='/add-task' className="bg-indigo-500 px-4 py-1 rounded-sm">Add Task</Link>

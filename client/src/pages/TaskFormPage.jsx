@@ -1,13 +1,15 @@
 import { useForm } from 'react-hook-form'
 import { useTasks } from '../context/TasksContext'
+import { useNavigate } from 'react-router-dom'
 
 function TasksFormPage() {
     const { register, handleSubmit } = useForm()
     const { createTask } = useTasks()
-    
+    const navigate = useNavigate()
 
     const onSubmit = handleSubmit((data) => {
         createTask(data)
+        navigate('/tasks')
     })
     return (
         <div className='flex h-[calc(100vh-100px)] items-center justify-center'>
